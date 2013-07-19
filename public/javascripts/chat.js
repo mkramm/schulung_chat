@@ -7,5 +7,3 @@ function Chat() {
     });
 
 }
-
-var chat = new Chat();

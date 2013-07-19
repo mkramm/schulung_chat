@@ -2,14 +2,23 @@
 <html>
 <head>
     <title></title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
     <script src="http://127.0.0.1:3001/socket.io/socket.io.js"></script>
     <script src="javascripts/chat.js"></script>
+    <script src="javascripts/user.js"></script>
+    <script src="javascripts/init.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <body>
     <div id="login">
-        <input name="username" type="text">
-        <input type="text" name="password">
+        <h1>Login</h1>
+        <input name="username" type="text" placeholder="name" id="username">
+        <input type="text" name="password" placeholder="password" id="password">
     </div>
-    <input type="text">
+    <div id="chat">
+        <h1>Chat</h1>
+        <input type="text">
+    </div>
 </body>
 </html>
