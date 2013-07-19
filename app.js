@@ -15,8 +15,9 @@ var io = require('socket.io').listen(3001);
 io.sockets.on('connection', function (socket) {
 
 
-    socket.on('message', function(message) {
-
+    socket.on('send', function(message) {
+		console.log(message);
+		socket.broadcast.emit('message', message);
     });
 
 

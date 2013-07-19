@@ -3,5 +3,7 @@ var Client = (function() {
     return {};
 })();
 
-Client.User = new User();
-Client.Chat = new Chat();
+$().ready(function(){
+	Client.User = new User();
+	Client.Chat = new Chat();
+});

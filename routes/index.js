@@ -13,11 +13,11 @@ exports.index = function (req, res) {
 };
 
 exports.login = function (req, res) {
-    connection.query('SELECT * from users WHERE username = "' + req.body.user.username + '" AND password = "' + req.body.user.password + '" LIMIT 1', function (err, rows, fields) {
+    connection.query('SELECT * from users WHERE username = "' + req.body.username + '" AND password = "' + req.body.password + '" LIMIT 1', function (err, rows, fields) {
         if (err) throw err;
 
         var user = rows[0];
-        user.password = new Array(user.password.length).join('*');
+        user.password = new Array(user.password.length+1).join('*');
 
         res.json(user);
     });
